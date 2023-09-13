@@ -8,7 +8,7 @@ import './contactform.css'
 const ContactForm = () => {
   return (
     <div className='flex flex-wrap justify-center bg-brown-700 p-12'>
-      <div className='w-[600px]'>
+      <div className='w-[550px]'>
         <h1 className='text-2xl md:text-5xl lg:text-5xl font-bold text-white'>
           Send us a Message
         </h1>
@@ -52,7 +52,7 @@ const ContactForm = () => {
           </div>
         </form>
       </div>
-      <div className='w-[600px] mt-8 md:mt-10 lg:mt-0  lg:ml-14 '>
+      <div className='w-[550px] mt-8 md:mt-10 lg:mt-0  lg:ml-14 '>
         <h1 className='text-2xl md:text-5xl lg:text-5xl font-bold text-white'>
           Our Location
         </h1>
