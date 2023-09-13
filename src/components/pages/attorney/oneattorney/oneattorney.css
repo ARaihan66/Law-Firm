@@ -1,0 +1,17 @@
+.attorneyIon:hover {
+  color: red;
+  transition: 1s;
+}
+.attorneyOne-back {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.attorney-block {
+  display: none;
+}
+
+.attorney-show:hover .attorney-block {
+  display: block;
+}
+.attorney-show:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}

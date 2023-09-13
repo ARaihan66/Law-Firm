@@ -1,0 +1,13 @@
+.attorney-back{
+ background-image: url(../../../assets/attorney.webp);
+  background-repeat: no-repeat;
+  background-position:right ;
+  background-size: cover;
+  height: 70vh;
+  
+}
+.Attorney-content{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}

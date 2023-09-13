@@ -1,0 +1,22 @@
+nav {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.icon {
+  font-size: 30px;
+}
+
+.nav-large {
+  position: relative;
+}
+.nav-small {
+  position: absolute;
+  left: 0px;
+}
+.bg-color {
+  background-color: rgb(240, 188, 152);
+}

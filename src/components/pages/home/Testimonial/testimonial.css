@@ -1,0 +1,56 @@
+.testimonial-swiper {
+  margin: 0 auto;
+}
+.testimonila-background{
+ background-color: rgb(97, 85, 85);
+}
+.testimonila-background1{
+ margin-top: 10px;
+ /* background-color:#E0A965; */
+}
+.testimonial-commentSection{
+background-color: #DC3D4B;
+margin-top: 15px;
+}
+.testimonial-form{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+.testimonial-form input{
+  border: 1px solid #E0A965;
+  background-color: rgb(245, 240, 240);
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  border-radius: 4px;
+  
+}
+.testimonial-form textarea{
+  border: 1px solid #E0A965;
+  background-color: rgb(245, 240, 240);
+   font-size: 18px;
+   font-weight: 500;
+  color: black;
+  border-radius: 4px;
+}
+.commentbtn1 .comment-submit{
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #e0a965;
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.comment-submit:hover {
+  transition: all 2s ease;
+  background-color: rgb(85, 79, 79);
+}
+

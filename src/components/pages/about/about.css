@@ -1,0 +1,13 @@
+.about-back{
+ background-image: url(../../../assets/aboutBack.webp);
+  background-repeat: no-repeat;
+  background-position:right ;
+  background-size: cover;
+  height: 70vh;
+  
+}
+.about-content{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
