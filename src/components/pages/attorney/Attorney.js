@@ -76,21 +76,22 @@ const Attorney = () => {
   ]
   return (
     <div>
-      <div className='attorney-back Attorney-content'>
-        <div>
+      <div className='relative attorney-back Attorney-content'>
+        <div className='z-40'>
           <p className='text-orange-400 text-xl font-medium text-center'>
             Most Successful Law Firm
           </p>
           <h1 className='text-orange-400 text-4xl  md:text-6xl md:font-bold lg:text-6xl lg:font-bold'>
-            The Attorneys
+            The Lawer
           </h1>
         </div>
+        <div className='absolute z-10 top-0 h-[100%] w-full bg-black/80'></div>
       </div>
       <div className='mx-auto my-0 lg:w-[1250px]'>
         <h1 className='text-5xl text-red-600 text-center font-bold mt-8'>
           Meet Our Lawers
         </h1>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-6 p-10 mt-14'>
+        <div className='grid grid-cols-1 gap-y-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-6 p-10 mt-14'>
           {Attorneys.map((attorney, i) => (
             <OneAttorney key={i} attorney={attorney} />
           ))}

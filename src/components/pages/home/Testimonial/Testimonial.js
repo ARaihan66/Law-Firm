@@ -1,10 +1,12 @@
 import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperSlide} from 'swiper/react'
+import { Autoplay } from 'swiper/modules'
 import t1 from '../../../../assets/t1.png'
 import t2 from '../../../../assets/t2.png'
 import t3 from '../../../../assets/t3.png'
 import t4 from '../../../../assets/t4.png'
 import 'swiper/css'
+import 'swiper/css/autoplay'
 import './testimonial.css'
 const Testimonial = () => {
   const customers = [
@@ -75,9 +77,11 @@ const Testimonial = () => {
         <div>
           <div className='mt-10 cursor-grabbing p-6 rounded'>
             <Swiper
+              modules={[Autoplay]}
               spaceBetween={50}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
+              autoplay={{delay:2000}}
               breakpoints={{
                 375: {
                   slidesPerView: 1,
@@ -121,12 +125,19 @@ const Testimonial = () => {
           <h1 className='font-semibold text-xl uppercase text-white pb-4'>
             Leave Us a Comment
           </h1>
-          <input className='p-2' type='file' name='' id='' />
+
           <input className='mt-4 p-2' type='text' placeholder='Your Name' />
+          <input
+            className='mt-4 p-2'
+            type='number'
+            placeholder='Your Phone Number'
+          />
+          <input className='p-2 mt-4' type='file' name='' id='' />
           <textarea
             className='mt-4 p-2'
             placeholder='Put Your Comment Here'
           ></textarea>
+
           <div className='commentbtn1 '>
             <input
               className='comment-submit mt-4 p-2 w-[100%]'

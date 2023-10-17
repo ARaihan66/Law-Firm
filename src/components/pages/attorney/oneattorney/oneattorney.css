@@ -1,8 +1,8 @@
-.attorneyIon:hover {
+ .attorneyIon:hover {
   color: red;
   transition: 1s;
-}
-.attorneyOne-back {
+} 
+ .attorneyOne-back {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .attorney-block {
@@ -14,4 +14,4 @@
 }
 .attorney-show:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
+} 

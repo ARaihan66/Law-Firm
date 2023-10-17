@@ -12,7 +12,7 @@ const ExpertLawer = () => {
         </h1>
         <p className='text-white pt-3'>Stay in Touch and get free Advice .</p>
       </div>
-      <Link>
+      <Link to='/contact'>
         <button className='ml-6 mt-6 px-5 py-4 md:px-[30px] md:py-[15px] lg:px-[30px] lg:py-[15px] md:mt-6  lg:mt-2 expert-btn'>
           get in touch
         </button>

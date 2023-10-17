@@ -40,14 +40,14 @@ const Navbar = () => {
               to='/practice'
               className='font-medium text-xl text-slate-700 mr-4 '
             >
-              Practice Areas
+              Services
             </NavLink>
 
             <NavLink
               to='/attorney'
               className='font-medium text-xl text-slate-700 mr-4 '
             >
-              Attorneys
+              Lawers
             </NavLink>
 
             <NavLink

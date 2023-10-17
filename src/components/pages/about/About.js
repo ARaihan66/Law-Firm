@@ -8,8 +8,8 @@ import Case from '../home/case/Case'
 const About = () => {
   return (
     <div>
-      <div className='about-back about-content'>
-        <div>
+      <div className='about-back about-content relative'>
+        <div className='z-40'>
           <p className='text-orange-400 text-xl font-medium text-center'>
             Most Successful Law Firm
           </p>
@@ -17,11 +17,11 @@ const About = () => {
             About Law firm
           </h1>
         </div>
+        <div className='absolute z-10 top-0 h-[100%] w-full bg-black/70'></div>
       </div>
-      <SolvingIssue/>
-      <Innovative/>
-      <Case/>
-      
+      <SolvingIssue />
+      <Innovative />
+      <Case />
     </div>
   )
 }

@@ -38,7 +38,7 @@ const QuestionAns = () => {
   return (
     <div>
        <h1 className='text-3xl text-center font-bold mt-16 md:text-3xl md:font-bold lg:text-3xl lg:font-bold'>
-        Law Questions and Answers
+       FAQ,S
       </h1>
       <div className='px-10 mt-10 h-[600px] overflow-y-auto'>
         {questionsAns.map((questionans, i) => (

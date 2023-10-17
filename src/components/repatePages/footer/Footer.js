@@ -53,19 +53,13 @@ const Footer = () => {
                 <ul key={title}>
                   <Typography
                     variant='small'
-                    color='blue-gray'
-                    className='mb-3 font-bold opacity-40 text-white text-[18px]'
+                    className='mb-3 font-bold  text-white text-[18px]'
                   >
                     {title}
                   </Typography>
                   {items.map((link) => (
                     <li key={link}>
-                      <Typography
-                        as='a'
-                        href='#'
-                        color='gray'
-                        className='py-1.5 font-normal transition-colors text-white hover:text-blue-gray-900'
-                      >
+                      <Typography className='py-1.5 font-normal transition-colors text-white'>
                         {link}
                       </Typography>
                     </li>
@@ -87,7 +81,7 @@ const Footer = () => {
                 <Typography
                   as='a'
                   href='#'
-                  className='opacity-80 transition-opacity hover:opacity-50'
+                  className=' transition-opacity'
                 >
                   <svg
                     className='h-8 w-8'
@@ -106,7 +100,7 @@ const Footer = () => {
               <Typography
                 as='a'
                 href='#'
-                className='opacity-80 transition-opacity hover:opacity-50'
+                className=' transition-opacity '
               >
                 <svg
                   className='h-8 w-8'
@@ -124,7 +118,7 @@ const Footer = () => {
               <Typography
                 as='a'
                 href='#'
-                className='opacity-80 transition-opacity hover:opacity-50'
+                className='transition-opacity'
               >
                 <svg
                   className='h-8 w-8'

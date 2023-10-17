@@ -27,7 +27,7 @@ const Introduce = () => {
             inventore veritatis ety quasi architecto beatae vitae dicta sunt
             explicabo nemo enim.
           </p>
-          <p className='mt-10 font-semibold'>Advocate jone doe</p>
+          <p className='mt-10 font-semibold text-xl'>ADVOCATE MOSTAFIJUR RAHAMAN</p>
           <p className='mt-4'>FOUNDER & SENIOR LAWYER</p>
         </div>
       </div>

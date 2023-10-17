@@ -30,14 +30,14 @@ const SingleQuestion = (props) => {
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value)
   return (
-    <div className='p-2 single-Question-Hover'>
+    <div className='p-2 '>
       <>
         <Accordion open={open === i} icon={<Icon id={i} open={open} />}>
           <AccordionHeader onClick={() => handleOpen(i)}>
-            <h1>{question}</h1>
+            <h1 className=' p-2 text-xl'>{question}</h1>
           </AccordionHeader>
           <AccordionBody>
-            <p>{ans}</p>
+            <p className='single-Question-Hover p-2 text-[18px]'>{ans}</p>
           </AccordionBody>
         </Accordion>
       </>

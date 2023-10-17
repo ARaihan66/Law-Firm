@@ -4,8 +4,8 @@ import ContactForm from './contactForm/ContactForm'
 const Contact = () => {
   return (
     <div>
-      <div className='contact-back contact-content'>
-        <div>
+      <div className='relative contact-back contact-content'>
+        <div className='z-40'>
           <p className='text-orange-400 text-xl font-medium text-center'>
             Most Successful Law Firm
           </p>
@@ -13,8 +13,9 @@ const Contact = () => {
             Contuct Us
           </h1>
         </div>
+        <div className='absolute z-10 top-0 h-[100%] w-full bg-black/80'></div>
       </div>
-      <ContactForm/>
+      <ContactForm />
     </div>
   )
 }

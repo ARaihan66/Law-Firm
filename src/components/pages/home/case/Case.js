@@ -10,19 +10,19 @@ const Case = () => {
       pic: CaseEvolution,
       name: 'FREE CASE EVALUATION',
       btnName: 'Learn More',
-      to: '/contact',
+       to: '/case_evaluation',
     },
     {
       pic: Flawer,
       name: 'FIND A LAWER',
       btnName: 'Get a Lawer',
-      to: '/contact',
+      to: '/attorney',
     },
     {
       pic: CaseLigation,
       name: 'CORPORATE LIGITATION',
       btnName: 'Learn More',
-      to: '/contact',
+       to: '/ligitation',
     },
   ]
 

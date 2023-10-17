@@ -16,56 +16,57 @@ const Practice = () => {
       name: 'Real Estate Laws',
       details:
         'Sit amet, consectetur adipisicing elit por incididunt ut labore et dolore ma gna alin veniam,quis.',
-      btnName: 'More Details',
+     
     },
     {
       img: personalInjury,
       name: 'Personal Injury',
       details:
         'Sit amet, consectetur adipisicing elit por incididunt ut labore et dolore ma gna alin veniam,quis.',
-      btnName: 'More Details',
+     
     },
     {
       img: CriminalLaws,
       name: 'Criminal Laws',
       details:
         'Sit amet, consectetur adipisicing elit por incididunt ut labore et dolore ma gna alin veniam,quis.',
-      btnName: 'More Details',
+    
     },
     {
       img: healthLaw,
       name: 'Health Related Laws',
       details:
         'Sit amet, consectetur adipisicing elit por incididunt ut labore et dolore ma gna alin veniam,quis.',
-      btnName: 'More Details',
+     
     },
     {
       img: DomesticVoilence,
       name: 'Domestic Voilence',
       details:
         'Sit amet, consectetur adipisicing elit por incididunt ut labore et dolore ma gna alin veniam,quis.',
-      btnName: 'More Details',
+     
     },
     {
       img: CorporateIssues,
       name: 'Corporate Issues',
       details:
         'Sit amet, consectetur adipisicing elit por incididunt ut labore et dolore ma gna alin veniam,quis.',
-      btnName: 'More Details',
+     
     },
   ]
 
   return (
     <div>
-      <div className='practice-back practice-content'>
-        <div>
+      <div className='practice-back relative practice-content'>
+        <div className='z-40'>
           <p className='text-orange-400 text-xl font-medium text-center'>
             Most Successful Law Firm
           </p>
           <h1 className='text-orange-400 text-4xl  md:text-6xl md:font-bold lg:text-6xl lg:font-bold'>
-            Practice Areas
+            Services Areas
           </h1>
         </div>
+        <div className='absolute z-10 top-0 h-[100%] w-full bg-black/70'></div>
       </div>
       <div className='p-10 mx-auto my-0  lg:w-[1200px]'>
         <div>
@@ -88,8 +89,8 @@ const Practice = () => {
           </div>
         </div>
       </div>
-      <PracticeSolution/>
-      <ExpertLawer/>
+      <PracticeSolution />
+      <ExpertLawer />
     </div>
   )
 }

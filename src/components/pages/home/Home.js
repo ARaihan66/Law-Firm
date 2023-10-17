@@ -3,21 +3,19 @@ import './home.css'
 import slider1 from '../../../assets/slider1.jpg'
 import slider2 from '../../../assets/slider2.webp'
 import slider3 from '../../../assets/slider3.jpg'
-import { Link } from 'react-router-dom'
+
 import Introduce from './introduces/Introduce'
 import Case from './case/Case'
 import Casesolve from './caseSolve/Casesolve'
 import QuestionAns from './QuestionOption/QuestionAns'
 import Testimonial from './Testimonial/Testimonial'
 
-
-
 const Home = () => {
   return (
     <div>
       <div className='relative'>
         <div
-          className='absolute z-10 top-10 left-2 p-2  md:top-1/3 md:left-20 md:w-[500px] 
+          className='absolute z-50 top-10 left-2 p-2  md:top-1/3 md:left-20 md:w-[500px] 
           lg:top-1/3 lg:left-28 lg:w-[850px]'
         >
           <p className='text-amber-500 md: text-xl lg:text-xl font-medium'>
@@ -31,11 +29,9 @@ const Home = () => {
             necessitatibus quibusdam corporis quia eveniet sed consequatur
             mollitia nesciunt.
           </p>
-          <Link>
-            <button className='home-btn mt-5'>Get the Lawer</button>
-          </Link>
         </div>
         <div className='carousel w-full'>
+          <div className='absolute z-40 top-0 h-[700px] w-full bg-black/70'></div>
           <div
             id='slide1'
             className='carousel-item relative w-full overflow-hidden'
@@ -45,7 +41,7 @@ const Home = () => {
               alt=''
               className='w-full object-cover h-[700px]'
             />
-            <div className='absolute flex justify-between transform -translate-y-1/2 top-[450px] left-32  md:left-5 md:right-5 md:top-1/2 lg:left-5 lg:right-5 lg:top-1/2 '>
+            <div className='absolute z-50 flex justify-between transform -translate-y-1/2 top-[450px] left-32  md:left-5 md:right-5 md:top-1/2 lg:left-5 lg:right-5 lg:top-1/2 '>
               <a href='#slide4' className='btn btn-circle '>
                 ❮
               </a>
@@ -63,7 +59,7 @@ const Home = () => {
               alt=''
               className='w-full object-cover h-[700px]'
             />
-            <div className='absolute flex justify-between transform -translate-y-1/2 top-[450px] left-32  md:left-5 md:right-5 md:top-1/2 lg:left-5 lg:right-5 lg:top-1/2'>
+            <div className='absolute z-50 flex justify-between transform -translate-y-1/2 top-[450px] left-32  md:left-5 md:right-5 md:top-1/2 lg:left-5 lg:right-5 lg:top-1/2'>
               <a href='#slide1' className='btn btn-circle'>
                 ❮
               </a>
@@ -81,7 +77,7 @@ const Home = () => {
               alt=''
               className='w-full object-cover h-[700px]'
             />
-            <div className='absolute flex justify-between transform -translate-y-1/2 top-[450px] left-32  md:left-5 md:right-5 md:top-1/2 lg:left-5 lg:right-5 lg:top-1/2'>
+            <div className='absolute z-50 flex justify-between transform -translate-y-1/2 top-[450px] left-32  md:left-5 md:right-5 md:top-1/2 lg:left-5 lg:right-5 lg:top-1/2'>
               <a href='#slide2' className='btn btn-circle'>
                 ❮
               </a>
@@ -95,9 +91,8 @@ const Home = () => {
       <Introduce></Introduce>
       <Case />
       <Casesolve />
-       <QuestionAns/> 
-       <Testimonial></Testimonial>
-     
+      <QuestionAns />
+      <Testimonial></Testimonial>
     </div>
   )
 }
