@@ -119,11 +119,11 @@ const Testimonial = () => {
       </div>
       <div className='testimonial-commentSection mt-20 p-10'>
         <form
-          className='testimonial-form md:w-[700px] lg:md:w-[700px] p-10'
+          className='testimonial-form md:w-[700px] lg:md:w-[700px]'
           action=''
         >
           <h1 className='font-semibold text-xl uppercase text-white pb-4'>
-            Leave Us a Comment
+            Leave a Comment
           </h1>
 
           <input className='mt-4 p-2' type='text' placeholder='Your Name' />
@@ -135,7 +135,7 @@ const Testimonial = () => {
           <input className='p-2 mt-4' type='file' name='' id='' />
           <textarea
             className='mt-4 p-2'
-            placeholder='Put Your Comment Here'
+            placeholder='Comment Here'
           ></textarea>
 
           <div className='commentbtn1 '>

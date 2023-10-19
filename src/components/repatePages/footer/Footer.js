@@ -58,7 +58,9 @@ const Footer = () => {
                   <li key={i}>
                     <Link to={l.page}>
                       <div>
-                        <p className='mt-3 font-medium'>{l.name}</p>
+                        <p className='mt-3 font-medium text-navyblue'>
+                          {l.name}
+                        </p>
                       </div>
                     </Link>
                   </li>
