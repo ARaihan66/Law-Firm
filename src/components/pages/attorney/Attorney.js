@@ -12,86 +12,62 @@ const Attorney = () => {
       img: team1,
       name: 'Paz Coyers',
       desig: 'Senior Attorney',
-
-      email: 'mail123@gmail.com',
-      phone: '01285552418',
     },
     {
       img: team2,
       name: 'Wanita Touchette',
       desig: 'Senior Attorney',
-
-      email: 'wain123@gmail.com',
-      phone: '01344425418',
     },
     {
       img: team3,
       name: 'Jefferson Leveston',
       desig: 'Senior Attorney',
-
-      email: 'jeff123@gmail.com',
-      phone: '01467355418',
     },
     {
       img: team4,
       name: 'Gali Borzillo',
       desig: 'Senior Attorney',
-
-      email: 'gali123@gmail.com',
-      phone: '01728555418',
     },
     {
       img: team2,
       name: 'Wanita Touchette',
       desig: 'Senior Attorney',
-
-      email: 'wain123@gmail.com',
-      phone: '01344425418',
     },
     {
       img: team1,
       name: 'Paz Coyers',
       desig: 'Senior Attorney',
-
-      email: 'mail123@gmail.com',
-      phone: '01285552418',
     },
     {
       img: team4,
       name: 'Gali Borzillo',
       desig: 'Senior Attorney',
-
-      email: 'gali123@gmail.com',
-      phone: '01728555418',
     },
-    
+
     {
       img: team3,
       name: 'Jefferson Leveston',
       desig: 'Senior Attorney',
-
-      email: 'jeff123@gmail.com',
-      phone: '01467355418',
     },
   ]
   return (
     <div>
       <div className='relative attorney-back Attorney-content'>
-        <div className='z-40'>
-          <p className='text-orange-400 text-xl font-medium text-center'>
+        <div className='z-20'>
+          <p className='text-amber-500 md:text-xl font-medium uppercase'>
             Most Successful Law Firm
           </p>
-          <h1 className='text-orange-400 text-4xl  md:text-6xl md:font-bold lg:text-6xl lg:font-bold'>
+          <h1 className='text-amber-500 text-3xl mt-4 font-bold md:text-5xl lg:text-6xl lg:font-medium lg:mt-3 uppercase'>
             The Lawer
           </h1>
         </div>
         <div className='absolute z-10 top-0 h-[100%] w-full bg-black/80'></div>
       </div>
       <div className='mx-auto my-0 lg:w-[1250px]'>
-        <h1 className='text-5xl text-red-600 text-center font-bold mt-8'>
+        <h1 className='text-3xl mt-20  font-bold  uppercase text-center text-navyblue'>
           Meet Our Lawers
         </h1>
-        <div className='grid grid-cols-1 gap-y-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-6 p-10 mt-14'>
+        <div className='grid grid-cols-1 gap-y-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-20 p-10 mt-2 mb-10'>
           {Attorneys.map((attorney, i) => (
             <OneAttorney key={i} attorney={attorney} />
           ))}

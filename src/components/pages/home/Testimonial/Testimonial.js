@@ -66,22 +66,22 @@ const Testimonial = () => {
     },
   ]
   return (
-    <div className='pt-8 testimonila-background1'>
-      <h1 className='text-5xl font-semibold text-center text-black'>
+    <div className='pt-20 testimonila-background1'>
+      <h1 className='text-3xl font-bold md:font-bold lg:font-bold text-navyblue uppercase text-center mb-10'>
         Words Form Clients
       </h1>
       <div
-        className=' rounded testimonial-swiper testimonila-background  w-[300px] md:w-[770px] lg:w-[1200px]'
+        className='rounded-2xl testimonial-swiper testimonila-background w-[300px] md:w-[770px] lg:w-[1200px] md:p-8 '
         id='testimonial'
       >
         <div>
-          <div className='mt-10 cursor-grabbing p-6 rounded'>
+          <div className='md:my-8 cursor-grabbing p-6 rounded'>
             <Swiper
               modules={[Autoplay]}
               spaceBetween={50}
-              onSlideChange={() => console.log('slide change')}
-              onSwiper={(swiper) => console.log(swiper)}
-              autoplay={{delay:2000}}
+              // onSlideChange={() => console.log('slide change')}
+              // onSwiper={(swiper) => console.log(swiper)}
+              autoplay={{ delay: 2000 }}
               breakpoints={{
                 375: {
                   slidesPerView: 1,
@@ -117,7 +117,7 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-      <div className='testimonial-commentSection'>
+      <div className='testimonial-commentSection mt-20 p-10'>
         <form
           className='testimonial-form md:w-[700px] lg:md:w-[700px] p-10'
           action=''
@@ -140,7 +140,7 @@ const Testimonial = () => {
 
           <div className='commentbtn1 '>
             <input
-              className='comment-submit mt-4 p-2 w-[100%]'
+              className='comment-submit mt-4 p-3 w-[100%]'
               type='submit'
               value='Post Comment'
             />

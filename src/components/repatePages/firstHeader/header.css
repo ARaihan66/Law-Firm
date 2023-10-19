@@ -4,13 +4,13 @@
  margin-bottom: 10px;
 }
 .header-icon {
-  color: #e0a965;
+  color: #000053;
 }
 .header-p {
   font-weight: 500;
 }
 .header-p:hover {
-  color: #e23e4e;
+  color: #000053;
 }
 .header-btn {
   border: none;
@@ -19,7 +19,7 @@
   vertical-align: middle;
   font-size: 13px;
   color: #fff;
-  background-color: #e23e4e;
+  background-color: #000053;
   border-radius: 2px;
   display: inline-block;
   vertical-align: middle;

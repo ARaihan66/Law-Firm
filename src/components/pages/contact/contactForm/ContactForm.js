@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom'
 import './contactform.css'
 const ContactForm = () => {
   return (
-    <div className='flex flex-wrap justify-center bg-brown-700 p-12'>
+    <div className='flex flex-wrap justify-center bgBlue p-20'>
       <div className='w-[550px]'>
-        <h1 className='text-2xl md:text-5xl lg:text-5xl font-bold text-white'>
+        <h1 className='text-3xl mt-20 text-amber-500  font-bold  uppercase text-center '>
           Send us a Message
         </h1>
         <form action='' className='mt-8'>
@@ -52,8 +52,8 @@ const ContactForm = () => {
           </div>
         </form>
       </div>
-      <div className='w-[550px] mt-8 md:mt-10 lg:mt-0  lg:ml-14 '>
-        <h1 className='text-2xl md:text-5xl lg:text-5xl font-bold text-white'>
+      <div className='w-[550px] mt-8 md:mt-10 lg:mt-0  lg:ml-20 '>
+        <h1 className='text-3xl mt-20  text-amber-500 font-bold  uppercase text-center '>
           Our Location
         </h1>
         <div>

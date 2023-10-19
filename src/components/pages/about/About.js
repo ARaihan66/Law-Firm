@@ -9,15 +9,15 @@ const About = () => {
   return (
     <div>
       <div className='about-back about-content relative'>
-        <div className='z-40'>
-          <p className='text-orange-400 text-xl font-medium text-center'>
+        <div className='z-10'>
+          <p className='text-amber-500 md:text-xl font-medium uppercase'>
             Most Successful Law Firm
           </p>
-          <h1 className='text-orange-400 text-4xl  md:text-6xl md:font-bold lg:text-6xl lg:font-bold'>
+          <h1 className='text-amber-500 text-3xl mt-4 font-bold md:text-5xl lg:text-6xl lg:font-medium lg:mt-3 uppercase'>
             About Law firm
           </h1>
         </div>
-        <div className='absolute z-10 top-0 h-[100%] w-full bg-black/70'></div>
+        <div className='absolute z-8 top-0 h-[100%] w-full bg-black/70'></div>
       </div>
       <SolvingIssue />
       <Innovative />

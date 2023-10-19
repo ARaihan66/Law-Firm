@@ -9,15 +9,17 @@ const SolvingIssue = () => {
       <div className='mt-6 md:mt-6'>
         <img src={aboutimg} alt='' />
         <div className='mt-6'>
-          <p className='uppercase text-xl font-semibold'>Mostafijur Rahaman</p>
+          <p className='uppercase text-navyblue text-xl font-semibold'>
+            Mostafijur Rahaman
+          </p>
           <p className='uppercase text-xl'>FOUNDER & SENIOR LAWYER</p>
         </div>
       </div>
       <div className='w-[420px]'>
-        <p className='text-xl font-semibold mt-8'>
+        <p className='text-xl font-semibold text-navyblue mt-8'>
           Proident sunt culpa officia deserunt
         </p>
-        <h1 className='text-5xl font-semibold mt-4'>
+        <h1 className='text-3xl mt-4 font-bold md:font-bold lg:font-bold text-navyblue uppercase'>
           Solving issues with great attention.
         </h1>
         <p className='mt-8'>

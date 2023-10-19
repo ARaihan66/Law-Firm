@@ -25,13 +25,13 @@ const Casesolve = () => {
     },
   ]
   return (
-    <div>
-      <div className='lg:w-[600px] mx-auto my-30 p-6 md:p-10 lg:p-2'>
-        <h1 className='text-3xl font-bold mt-16 md:text-3xl md:font-bold lg:text-3xl lg:font-bold'>
+    <div className='mt-20'>
+      <div className='lg:w-[700px] mx-auto my-30 p-6 md:p-10 lg:p-2'>
+        <h1 className='text-3xl font-bold md:font-bold lg:font-bold text-navyblue uppercase '>
           We solve complex legal issues with ease.
         </h1>
         <div className='casesolved-skild mt-10'>
-          <p className='p-4 font-serif font-semibold text-slate-500'>
+          <p className='p-4 font-semibold text-slate-500'>
             Proident culpa officia deserunt mollit animd laborum perspicia natus
             error voluptatem qui acusantium dolore laudan.
           </p>

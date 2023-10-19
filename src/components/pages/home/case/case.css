@@ -28,7 +28,7 @@
   font-weight: bold;
 }
 .case-btn:hover {
-  border: 2px solid #e23e4e;
+  border: 2px solid #000053;
   outline: none;
   border-radius: 2px;
   display: inline-block;
@@ -36,6 +36,6 @@
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-  background-color: #e23e4e;
+  background-color: #000053;
   transition: 0.8s;
 }

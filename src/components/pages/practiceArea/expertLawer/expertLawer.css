@@ -1,16 +1,16 @@
 .expert-back {
-  background-color: #e0a965;
+  background-color: #ffc107;
 }
 .expert-btn {
-  border: 1px solid white;
-  color: azure;
+  border: 1px solid #000053;
+  color: #000053;
   text-transform: uppercase;
-  
   font-weight: 600;
 }
 .expert-btn:hover {
-  background-color: #13161d;
-  border: 1px solid  #13161d;
+  background-color: #000053;
+  border: 1px solid #000053;
   border-radius: 2px;
+  color: white;
   transition: 1s;
 }

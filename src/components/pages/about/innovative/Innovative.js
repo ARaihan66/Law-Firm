@@ -15,7 +15,7 @@ const Innovative = () => {
   const value2 = userValue2 / 100
   return (
     <div>
-      <div className='innovative-background1 p-8'>
+      <div className='innovative-background1 p-28 mt-20'>
         <div className='flex flex-wrap justify-center'>
           <div className='mt-4'>
             <div style={{ width: 150, height: 150 }}>
@@ -26,8 +26,8 @@ const Innovative = () => {
                 styles={buildStyles({
                   textSize: '25px',
                   textWeight: '900',
-                  pathColor: `black`,
-                  textColor: 'black',
+                  pathColor: `rgb(255 193 7)`,
+                  textColor: 'white',
                   trailColor: 'white',
                   pathTransitionDuration: 0.5,
                 })}
@@ -47,8 +47,8 @@ const Innovative = () => {
                 styles={buildStyles({
                   textSize: '25px',
                   textWeight: '900',
-                  pathColor: `black`,
-                  textColor: 'black',
+                  pathColor: `rgb(255 193 7)`,
+                  textColor: 'white',
                   trailColor: 'white',
                   pathTransitionDuration: 0.5,
                 })}
@@ -67,8 +67,8 @@ const Innovative = () => {
                 styles={buildStyles({
                   textSize: '25px',
                   textWeight: '900',
-                  pathColor: `black`,
-                  textColor: 'black',
+                  pathColor: `rgb(255 193 7)`,
+                  textColor: 'white',
                   trailColor: 'white',
                   pathTransitionDuration: 0.5,
                 })}
@@ -79,11 +79,10 @@ const Innovative = () => {
             </p>
           </div>
         </div>
-        <h1 className='text-5xl font-medium text-center mt-10'>
+        <h1 className='text-xl md:text-3xl mt-14 font-bold  text-amber-500 uppercase md:text-center mb-10'>
           Skilled Lawyers at Help With a Clear Mission
         </h1>
       </div>
-      
     </div>
   )
 }

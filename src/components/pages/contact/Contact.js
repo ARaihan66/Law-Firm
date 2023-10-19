@@ -5,11 +5,11 @@ const Contact = () => {
   return (
     <div>
       <div className='relative contact-back contact-content'>
-        <div className='z-40'>
-          <p className='text-orange-400 text-xl font-medium text-center'>
+        <div className='z-20'>
+          <p className='text-amber-500 md:text-xl font-medium uppercase'>
             Most Successful Law Firm
           </p>
-          <h1 className='text-orange-400 text-4xl  md:text-6xl md:font-bold lg:text-6xl lg:font-bold'>
+          <h1 className='text-amber-500 text-3xl mt-4 font-bold md:text-5xl lg:text-6xl lg:font-medium lg:mt-3 uppercase'>
             Contuct Us
           </h1>
         </div>

@@ -30,8 +30,8 @@ const PracticeSolution = () => {
     },
   ]
   return (
-    <div className='practicesolution-back'>
-      <h1 className='text-white text-center text-5xl font-bold pt-10'>
+    <div className='practicesolution-back mt-20 p-10 md:p-14'>
+      <h1 className='text-3xl mt-10  font-bold  uppercase text-center text-amber-500'>
         Solutions From Law Firm
       </h1>
       <div className='flex justify-center py-10 flex-wrap'>

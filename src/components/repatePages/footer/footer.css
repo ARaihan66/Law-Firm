@@ -1,3 +1,5 @@
-.footer-background{
-background-color: #13161D;
+.footer-background {
+  background-image: url(../../../assets/footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

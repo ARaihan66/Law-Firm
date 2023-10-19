@@ -58,23 +58,23 @@ const Practice = () => {
   return (
     <div>
       <div className='practice-back relative practice-content'>
-        <div className='z-40'>
-          <p className='text-orange-400 text-xl font-medium text-center'>
+        <div className='z-20'>
+          <p className='text-amber-500 md:text-xl font-medium uppercase'>
             Most Successful Law Firm
           </p>
-          <h1 className='text-orange-400 text-4xl  md:text-6xl md:font-bold lg:text-6xl lg:font-bold'>
+          <h1 className='text-amber-500 text-3xl mt-4 font-bold md:text-5xl lg:text-6xl lg:font-medium lg:mt-3 uppercase'>
             Services Areas
           </h1>
         </div>
         <div className='absolute z-10 top-0 h-[100%] w-full bg-black/70'></div>
       </div>
       <div className='p-10 mx-auto my-0  lg:w-[1200px]'>
-        <div>
-          <h1 className='text-center text-xl font-semibold text-gray-800'>
+        <div className='mt-20'>
+          <h1 className='text-3xl mt-4 font-bold md:font-bold lg:font-bold text-navyblue uppercase'>
             Proident sunt culpa officia deserunt mollit animd laborum perspicia
             natus qui acusantium
           </h1>
-          <p className='text-center text-gray-800 mt-6'>
+          <p className='text-gray-800 my-10'>
             Labore et dolore magna aliqu. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco dui laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor reprehenderit kind voluptate velit
@@ -82,7 +82,7 @@ const Practice = () => {
             cupidatas non proident sunt culpa qui officia deserunt doloremque
             laudantium totam rem aperiam eaque ipsa quae ab illo.
           </p>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 mt-10'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-y-28 md:mt-20'>
             {practiceAreas.map((practiceArea, i) => (
               <OnePractice key={i} practiceArea={practiceArea} />
             ))}

@@ -6,24 +6,31 @@ import './footer.css'
 const Footer = () => {
   const SITEMAP = [
     {
-      title: 'Practice Areas',
-      items: [
-        'Real Estate Laws',
-        'Personal Injury',
-        'Criminal Laws',
-        'Health & Insurance',
-        'Domestic Voilance',
-        'Fraud & Theft',
-        'Transportation Laws',
+      title: 'Quick Links',
+
+      links: [
+        {
+          name: 'About',
+          page: '/about',
+        },
+        {
+          name: 'Attorney',
+          page: '/attorney',
+        },
+        {
+          name: 'Practice',
+          page: '/practice',
+        },
+        {
+          name: 'Contact',
+          page: '/contact',
+        },
       ],
     },
-    {
-      title: 'Quick Links',
-      items: ['About Law Firm', 'Our Attorneys', 'Practice Area', 'Contact us'],
-    },
+
     {
       title: 'Head Office',
-      items: [
+      item: [
         '15 Pillis Avenue, Southern StreetCamron, Florida FL 33069',
         'Helpline: 1-258-985-703',
         'Mon to Fri : 09:00 am - 18:00 pm',
@@ -38,51 +45,45 @@ const Footer = () => {
     <div>
       <footer className='relative w-full footer-background'>
         <div className='mx-auto w-full max-w-7xl px-8 pt-8'>
-          <div className='grid grid-cols-1 justify-between gap-2  md:grid-cols-1 lg:grid-cols-2'>
-            <Typography variant='h5' className='mb-6'>
-              <img src={footerimg} className=' w-[120px]' alt='' />
-              <p className='text-sm w-[250px] md:w-[320px] lg:w-[320px] text-justify text-white'>
-                Ipsum dolor sit amet, consecterelit, sed eiusmod tempor
-                incididunt labore et dolore magnas. Lorem ipsum dolor sit amet,
-                consectetur. Do eiusmod tempor incididunt ut labore et dolore
-                magna aliquat enim ad minim veniam.
-              </p>
-            </Typography>
-            <div className='grid md:grid-cols-1 lg:grid-cols-3 justify-between gap-4'>
-              {SITEMAP.map(({ title, items }) => (
-                <ul key={title}>
-                  <Typography
-                    variant='small'
-                    className='mb-3 font-bold  text-white text-[18px]'
-                  >
-                    {title}
-                  </Typography>
-                  {items.map((link) => (
-                    <li key={link}>
-                      <Typography className='py-1.5 font-normal transition-colors text-white'>
-                        {link}
-                      </Typography>
-                    </li>
-                  ))}
-                </ul>
-              ))}
-            </div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+            {SITEMAP?.map(({ title, item, links }) => (
+              <ul key={title}>
+                <Typography
+                  variant='small'
+                  className='mb-3 font-bold  text-navyblue text-[24px]'
+                >
+                  {title}
+                </Typography>
+                {links?.map((l, i) => (
+                  <li key={i}>
+                    <Link to={l.page}>
+                      <div>
+                        <p className='mt-3 font-medium'>{l.name}</p>
+                      </div>
+                    </Link>
+                  </li>
+                ))}
+                {item?.map((link) => (
+                  <li key={link}>
+                    <div className='py-1.5 font-medium transition-colors text-navyblue'>
+                      {link}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            ))}
           </div>
           <div className='mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-200 py-4 md:flex-row md:justify-between'>
             <Typography
               variant='small'
-              className='mb-4 text-center text-white md:mb-0 font-bold text-xl'
+              className='mb-4 text-center text-navyblue md:mb-0 font-bold text-xl'
             >
               &copy; {currentYear} <Link>Law Firm</Link>. All Rights Reserved.
             </Typography>
-            <div className='flex gap-4 text-white sm:justify-center'>
+            <div className='flex gap-4 text-navyblue sm:justify-center'>
               <Link>
                 {' '}
-                <Typography
-                  as='a'
-                  href='#'
-                  className=' transition-opacity'
-                >
+                <Typography as='a' href='#' className=' transition-opacity'>
                   <svg
                     className='h-8 w-8'
                     fill='currentColor'
@@ -97,11 +98,7 @@ const Footer = () => {
                   </svg>
                 </Typography>
               </Link>
-              <Typography
-                as='a'
-                href='#'
-                className=' transition-opacity '
-              >
+              <Typography as='a' href='#' className=' transition-opacity '>
                 <svg
                   className='h-8 w-8'
                   fill='currentColor'
@@ -115,11 +112,7 @@ const Footer = () => {
                   />
                 </svg>
               </Typography>
-              <Typography
-                as='a'
-                href='#'
-                className='transition-opacity'
-              >
+              <Typography as='a' href='#' className='transition-opacity'>
                 <svg
                   className='h-8 w-8'
                   fill='currentColor'
