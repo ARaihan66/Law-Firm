@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import './contactform.css'
 const ContactForm = () => {
   return (
-    <div className='flex flex-wrap justify-center bgBlue p-20'>
+    <div className='flex flex-wrap justify-center bgBlue p-10 md:p-15'>
       <div className='w-[550px]'>
         <h1 className='text-3xl mt-20 text-amber-500  font-bold  uppercase text-center '>
           Send us a Message

@@ -36,35 +36,35 @@ const Navbar = () => {
             <div className='hidden lg:flex gap-4'>
               <NavLink
                 to='/'
-                className='font-medium text-xl text-slate-700 mr-4 '
+                className='font-bold text-xl text-slate-700 mr-4  text-navyblue'
               >
                 Home
               </NavLink>
 
               <NavLink
                 to='/about'
-                className='font-medium text-xl text-slate-700 mr-4 '
+                className='font-bold text-navyblue text-xl  mr-4 '
               >
                 About
               </NavLink>
 
               <NavLink
                 to='/practice'
-                className='font-medium text-xl text-slate-700 mr-4 '
+                className='font-bold text-navyblue text-xl mr-4 '
               >
                 Services
               </NavLink>
 
               <NavLink
                 to='/attorney'
-                className='font-medium text-xl text-slate-700 mr-4 '
+                className='font-bold text-navyblue text-xl mr-4 '
               >
                 Lawers
               </NavLink>
 
               <NavLink
                 to='/contact'
-                className='font-medium text-xl text-slate-700 mr-4 '
+                className='font-bold text-navyblue text-xl  mr-4 '
               >
                 Contact
               </NavLink>
@@ -89,7 +89,7 @@ const Navbar = () => {
                   <>
                     <NavLink
                       to='/'
-                      className='font-medium text-xl text-slate-700 pt-3 pl-4'
+                      className='font-bold text-navyblue text-xl  pt-3 pl-4'
                       onClick={() => setOpen(!open)}
                     >
                       Home
@@ -97,7 +97,7 @@ const Navbar = () => {
                     <hr />
                     <NavLink
                       to='/about'
-                      className='font-medium text-xl text-slate-700  pl-4'
+                      className='font-bold text-navyblue text-xl pl-4'
                       onClick={() => setOpen(!open)}
                     >
                       About
@@ -105,7 +105,7 @@ const Navbar = () => {
                     <hr />
                     <NavLink
                       to='/practice'
-                      className='font-medium text-xl text-slate-700 pl-4'
+                      className='font-bold text-navyblue text-xl  pl-4'
                       onClick={() => setOpen(!open)}
                     >
                       Services
@@ -113,7 +113,7 @@ const Navbar = () => {
                     <hr />
                     <NavLink
                       to='/attorney'
-                      className='font-medium text-xl text-slate-700  pl-4'
+                      className='font-bold text-navyblue text-xl pl-4'
                       onClick={() => setOpen(!open)}
                     >
                       Lawers
@@ -121,7 +121,7 @@ const Navbar = () => {
                     <hr />
                     <NavLink
                       to='/contact'
-                      className='font-medium text-xl text-slate-700 mb-2  pl-4'
+                      className='font-bold text-navyblue text-xl mb-2  pl-4'
                       onClick={() => setOpen(!open)}
                     >
                       Contact
