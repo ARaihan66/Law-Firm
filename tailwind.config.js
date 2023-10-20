@@ -4,7 +4,7 @@ module.exports = withMT({
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     colors: {
-      navyblue: '#000053'
+      navyblue: '#000053',
     },
     extend: {},
   },
