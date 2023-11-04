@@ -1,8 +1,6 @@
 import React from 'react'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
-import { AiOutlineRead } from 'react-icons/ai'
-import { FaPenToSquare } from 'react-icons/fa6'
-import { FaLeaf } from 'react-icons/fa'
+
 
 import 'react-circular-progressbar/dist/styles.css'
 import './innovative.css'

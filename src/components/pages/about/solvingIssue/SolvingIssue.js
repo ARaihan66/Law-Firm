@@ -9,10 +9,10 @@ const SolvingIssue = () => {
       <div className='mt-6 md:mt-6'>
         <img src={aboutimg} alt='' />
         <div className='mt-6'>
+          <p className='uppercase text-xl'>FOUNDER & SENIOR LAWYER</p>
           <p className='uppercase text-navyblue text-xl font-semibold'>
             Mostafijur Rahaman
           </p>
-          <p className='uppercase text-xl'>FOUNDER & SENIOR LAWYER</p>
         </div>
       </div>
       <div className='w-[420px]'>

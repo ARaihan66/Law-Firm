@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FaBars } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
-import lawIcon from '../../../assets/law-icon.png'
+import lawIcon from '../../../assets/LawFirmLogo.png'
 import { AiOutlineClose } from 'react-icons/ai'
 import './navbar.css'
 const Navbar = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
                 src={lawIcon}
                 alt=''
                 srcset=''
-                className='w-[100px] h-[70px]'
+                className='w-[200px]'
               />
             </NavLink>
           </div>

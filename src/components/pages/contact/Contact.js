@@ -10,7 +10,7 @@ const Contact = () => {
             Most Successful Law Firm
           </p>
           <h1 className='text-amber-500 text-3xl mt-4 font-bold md:text-5xl lg:text-6xl lg:font-medium lg:mt-3 uppercase'>
-            Contuct Us
+            Contact Us
           </h1>
         </div>
         <div className='absolute z-10 top-0 h-[100%] w-full bg-black/80'></div>
