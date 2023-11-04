@@ -32,8 +32,7 @@ const Casesolve = () => {
         </h1>
         <div className='casesolved-skild mt-10'>
           <p className='p-4 font-semibold text-slate-500'>
-            Proident culpa officia deserunt mollit animd laborum perspicia natus
-            error voluptatem qui acusantium dolore laudan.
+           Our skilled lawyers in the country working with our clients to ensure that they get one-stop legal solution.
           </p>
         </div>
       </div>
@@ -41,7 +40,7 @@ const Casesolve = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           {' '}
           {solveCases.map((solvecase, i) => (
-            <OneCaseSolve key={i} solvecase={solvecase}></OneCaseSolve>
+            <OneCaseSolve key={i} solvecase={solvecase}/>
           ))}
         </div>
       </div>
