@@ -1,154 +1,159 @@
-import React from 'react'
-import { Swiper, SwiperSlide} from 'swiper/react'
-import { Autoplay } from 'swiper/modules'
-import t1 from '../../../../assets/t1.png'
-import t2 from '../../../../assets/t2.png'
-import t3 from '../../../../assets/t3.png'
-import t4 from '../../../../assets/t4.png'
-import 'swiper/css'
-import 'swiper/css/autoplay'
-import './testimonial.css'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import { useDispatch, useSelector } from "react-redux";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "./testimonial.css";
+import Avater from "../../../../assets/avater.png";
+//import { commnetDataFetching } from "../../../../feature/commentSlice";
+import { fetchCommentData } from "../../../../feature/dataSlice";
 const Testimonial = () => {
-  const customers = [
-    {
-      img: t1,
-      description:
-        'Everyone at MD Infotech are such a pleasure to work for. There very accommodating as far as hours are concerned and work with you on a personal level.',
-      Name: 'Jose J. Crosss',
-    },
-    {
-      img: t2,
-      description:
-        'I been surprised with the turnaround from MD Infotech. Super professional & cooperative. True delighted to work with MD Infotech.',
-      Name: 'Vanna Thomas',
-    },
-    {
-      img: t3,
-      description:
-        'Great service...I did not have any ideas on how to get started and seller patiently worked with me through the plan to use again in future.',
-      Name: 'Leroy P. King',
-    },
-    {
-      img: t4,
-      description:
-        'They Did incredible work! Super fast. Easy to communicate with. Highly recommend and plan to use again in future.',
-      Name: 'Hubert H. Henderson',
-    },
-    {
-      img: t4,
-      description:
-        'They Did incredible work! Super fast. Easy to communicate with. Highly recommend and plan to use again in future.',
-      Name: 'Hubert H. Henderson',
-    },
-    {
-      img: t4,
-      description:
-        'They Did incredible work! Super fast. Easy to communicate with. Highly recommend and plan to use again in future.',
-      Name: 'Hubert H. Henderson',
-    },
-    {
-      img: t4,
-      description:
-        'They Did incredible work! Super fast. Easy to communicate with. Highly recommend and plan to use again in future.',
-      Name: 'Hubert H. Henderson',
-    },
-    {
-      img: t4,
-      description:
-        'They Did incredible work! Super fast. Easy to communicate with. Highly recommend and plan to use again in future.',
-      Name: 'Hubert H. Henderson',
-    },
-    {
-      img: t4,
-      description:
-        'They Did incredible work! Super fast. Easy to communicate with. Highly recommend and plan to use again in future.',
-      Name: 'Hubert H. Henderson',
-    },
-  ]
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    comment: "",
+  });
+
+  const {commentData} = useSelector((state) => state.storeData);
+  //console.log(commentData.data);
+  const navigate = useNavigate();
+
+  const { name, phone, email, comment } = formData;
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    axios
+      .post("http://localhost:8000/api/comment/create", {
+        name,
+        phone,
+        email,
+        comment,
+      })
+      .then((result) => {
+        if (result.data.message === "successful") navigate(0);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const handleOnChange = (event) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCommentData());
+  }, [dispatch]);
+
   return (
-    <div className='pt-20 testimonila-background1'>
-      <h1 className='text-3xl font-bold md:font-bold lg:font-bold text-navyblue uppercase text-center mb-10'>
+    <div className="pt-20 testimonila-background1">
+      <h1 className="text-3xl font-bold md:font-bold lg:font-bold text-navyblue uppercase text-center mb-10">
         Words Form Clients
       </h1>
       <div
-        className='rounded-2xl testimonial-swiper testimonila-background w-[300px] md:w-[770px] lg:w-[1200px] md:p-8 '
-        id='testimonial'
+        className="rounded-2xl testimonial-swiper testimonila-background w-[300px] md:w-[770px] lg:w-[1200px] md:p-8 "
+        id="testimonial"
       >
         <div>
-          <div className='md:my-8 cursor-grabbing p-6 rounded'>
-            <Swiper
-              modules={[Autoplay]}
-              spaceBetween={50}
-              // onSlideChange={() => console.log('slide change')}
-              // onSwiper={(swiper) => console.log(swiper)}
-              autoplay={{ delay: 2000 }}
-              breakpoints={{
-                375: {
-                  slidesPerView: 1,
-                },
-                767: {
-                  slidesPerView: 1,
-                },
-                1200: {
-                  slidesPerView: 2,
-                },
-              }}
-            >
-              {customers.map((customer, i) => (
-                <SwiperSlide key={i}>
-                  <div className='card bg-base-100 shadow-xl p-4'>
-                    <figure className=''>
-                      <img
-                        src={customer.img}
-                        alt=''
-                        className='rounded-xl w-[170px]'
-                      />
-                    </figure>
-                    <div className='card-body items-center text-center'>
-                      <p className='text-justify'>{customer.description}</p>
-                      <div className='card-actions'>
-                        <h2 className='font-bold'>{customer.Name}</h2>
+          <div className="md:my-8 cursor-grabbing p-6 rounded">
+            {commentData && commentData.data && (
+              <Swiper
+                modules={[Autoplay]}
+                spaceBetween={50}
+                autoplay={{ delay: 2000 }}
+                breakpoints={{
+                  375: { slidesPerView: 1 },
+                  767: { slidesPerView: 1 },
+                  1200: { slidesPerView: 2 },
+                }}
+              >
+                {commentData.data.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="card bg-base-100 shadow-xl p-4">
+                      <figure className="">
+                        <img
+                          src={Avater}
+                          alt={item.name}
+                          className="rounded-xl w-[170px]"
+                        />
+                      </figure>
+                      <div className="card-body items-center text-center">
+                        <p className="text-justify">{item.comment}</p>
+                        <div className="card-actions">
+                          <h2 className="font-bold">{item.name}</h2>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            )}
           </div>
         </div>
       </div>
-      <div className='testimonial-commentSection mt-20 p-10'>
+      <div className="testimonial-commentSection mt-20 p-10">
         <form
-          className='testimonial-form md:w-[700px] lg:md:w-[700px]'
-          action=''
+          className="testimonial-form md:w-[700px] lg:md:w-[700px]"
+          onSubmit={handleSubmit}
         >
-          <h1 className='font-semibold text-xl uppercase text-white pb-4'>
+          <h1 className="font-semibold text-xl uppercase text-white pb-4">
             Leave a Comment
           </h1>
 
-          <input className='mt-4 p-2' type='text' placeholder='Your Name' />
           <input
-            className='mt-4 p-2'
-            type='number'
-            placeholder='Your Phone Number'
+            className="mt-4 p-2"
+            type="text"
+            placeholder="Your Name"
+            value={name}
+            onChange={handleOnChange}
+            name="name"
           />
-          <input className='p-2 mt-4' type='file' name='' id='' />
+          <input
+            className="mt-4 p-2"
+            type="number"
+            placeholder="Your Phone Number"
+            value={phone}
+            name="phone"
+            onChange={handleOnChange}
+          />
+          <input
+            className="p-2 mt-4"
+            type="email"
+            placeholder="Enter Your E-mail"
+            value={email}
+            name="email"
+            id=""
+            onChange={handleOnChange}
+          />
           <textarea
-            className='mt-4 p-2'
-            placeholder='Comment Here'
-          ></textarea>
+            className="mt-4 p-2"
+            placeholder="Comment Here"
+            value={comment}
+            name="comment"
+            onChange={handleOnChange}
+          />
 
-          <div className='commentbtn1 '>
+          <div className="commentbtn1 ">
             <input
-              className='comment-submit mt-4 p-3 w-[100%]'
-              type='submit'
-              value='Post Comment'
+              className="comment-submit mt-4 p-3 w-[100%]"
+              type="submit"
+              value="Post Comment"
             />
           </div>
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Testimonial
+export default Testimonial;

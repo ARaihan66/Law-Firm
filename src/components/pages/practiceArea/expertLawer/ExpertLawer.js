@@ -1,5 +1,5 @@
 import React from 'react'
-import picture from '../../../../assets/law-icon.png'
+import picture from '../../../../assets/Logo.png'
 import './expertLawer.css'
 import { Link } from 'react-router-dom';
 const ExpertLawer = () => {
