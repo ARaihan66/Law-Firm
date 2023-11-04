@@ -1,5 +1,11 @@
-.footer-background {
+/*.footer-background {
   background-image: url(../../../assets/footer.png);
   background-repeat: no-repeat;
   background-size: cover;
+}*/
+
+
+.logo{
+  height: 100px;
+  width: 100px;
 }
