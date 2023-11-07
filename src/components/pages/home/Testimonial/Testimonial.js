@@ -8,27 +8,31 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "./testimonial.css";
 import Avater from "../../../../assets/avater.png";
-//import { commnetDataFetching } from "../../../../feature/commentSlice";
+import { MuiTelInput } from 'mui-tel-input'
 import { fetchCommentData } from "../../../../feature/dataSlice";
 const Testimonial = () => {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
     email: "",
     comment: "",
   });
 
-  const {commentData} = useSelector((state) => state.storeData);
+  const [phone, setValue] = React.useState('')
+
+  const handleChange = (newValue) => {
+    setValue(newValue)
+  }
+
+  const { commentData } = useSelector((state) => state.storeData);
   //console.log(commentData.data);
   const navigate = useNavigate();
 
-  const { name, phone, email, comment } = formData;
+  const { name, email, comment } = formData;
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     axios
-      .post("http://localhost:8000/api/comment/create", {
+      .post("http://localhost:8000/api/comment/add", {
         name,
         phone,
         email,
@@ -48,6 +52,16 @@ const Testimonial = () => {
       [event.target.name]: event.target.value,
     }));
   };
+
+  //const handleOnChange = (event) => {
+  //  if (event && event.target) {
+  //    const { name, value } = event.target;
+  //    setFormData((prevState) => ({
+  //      ...prevState,
+  //      [name]: value, // Update the specific field (name) in the state
+  //    }));
+  //  }
+  //};
 
   const dispatch = useDispatch();
 
@@ -118,14 +132,18 @@ const Testimonial = () => {
             onChange={handleOnChange}
             name="name"
           />
-          <input
+          {/*<input
             className="mt-4 p-2"
             type="number"
             placeholder="Your Phone Number"
             value={phone}
             name="phone"
             onChange={handleOnChange}
-          />
+          />*/}
+
+<MuiTelInput value={phone} onChange={handleChange} />
+
+
           <input
             className="p-2 mt-4"
             type="email"
