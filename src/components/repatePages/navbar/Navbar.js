@@ -22,7 +22,6 @@ const Navbar = () => {
     // Scroll to the top of the page
     window.scrollTo(0, 0);
   };
-
   return (
     <div className="sticky z-40 top-0">
       <nav className="py-2 pl-6 pr-6 relative">

@@ -5,9 +5,21 @@ import aboutimg from "../../../../assets/about-pic.jpg";
 import "./solving.css";
 const SolvingIssue = () => {
   return (
+<<<<<<< HEAD
+    <div className='flex justify-around p-10 flex-wrap'>
+      <div className='mt-6 md:mt-6'>
+        <img src={aboutimg} alt='' />
+        <div className='mt-6'>
+          <p className='uppercase text-xl'>FOUNDER & SENIOR LAWYER</p>
+          <p className='uppercase text-navyblue text-xl font-semibold'>
+            Mostafijur Rahaman
+          </p>
+        </div>
+=======
     <div className="flex justify-around p-5 flex-wrap">
       <div className="mt-6 md:mt-6">
         <img src={aboutimg} alt="" className="about-image" />
+>>>>>>> 20aa4309b7f034e5108a90dfec02aba7ecfc6c19
       </div>
       <div className="w-[420px]">
         <h1 className="text-2xl mt-2 font-bold md:font-bold lg:font-bold text-navyblue uppercase">
