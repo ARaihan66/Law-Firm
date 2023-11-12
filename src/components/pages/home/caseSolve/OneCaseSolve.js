@@ -14,7 +14,7 @@ const [counterOn, setCounter] = useState(false)
           {counterOn && (
             <CountUp start={0} end={numeric} duration={3} delay={0}></CountUp>
           )}
-          {operation}
+          {operation}+
         </h1>
         <p className='text-center font-bold text-xl mt-3'>{achievement}</p>
       </div>

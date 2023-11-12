@@ -11,6 +11,7 @@
 .testimonial-form {
   margin: 0 auto;
   display: flex;
+  gap: 10px;
   flex-direction: column;
 }
 .testimonial-form input {

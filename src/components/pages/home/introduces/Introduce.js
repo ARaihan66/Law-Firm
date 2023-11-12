@@ -25,7 +25,7 @@ const Introduce = () => {
               className="rounded-full w-23 h-23 object-cover bg-gray-200"
             />
 
-            <p className="mt-10 font-semibold text-navyblue text-2xl ">
+            <p className="mt-10 font-semibold text-navyblue text-2xl text-center">
               ADVOCATE MOSTAFIJUR RAHAMAN (RASHED)
             </p>
             <h3 className="mt-4 text-center text-xl">FOUNDER & CEO</h3>
@@ -36,8 +36,8 @@ const Introduce = () => {
           </div>
         </div>
 
-        <div className="mt-8 md:mt-10 lg:w-[600px] lg:ml-10 lg:mt-0">
-          <p className="mt-10 font-semibold text-navyblue text-xl">
+        <div className="md:mt-10 lg:w-[600px] lg:ml-10">
+          <p className="md:mt-10 font-semibold text-navyblue text-xl">
             ABOUT MOSTAFIJUR RAHAMAN
           </p>
           <p className="hcolor text-justify mt-2">

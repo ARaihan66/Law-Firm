@@ -52,9 +52,9 @@ const Home = () => {
           </h1>
         </div>
         <div className="absolute z-10 top-0 h-[100%] w-full bg-black/70"></div>
-        <div className="w-[100%] h-[300px] md:h-[700px]">
+        <div className="w-[100%] h-[100%] md:h-[700px]">
           <Slider {...settings} className="overflow-hidden">
-            <div className="h-[300px] md:h-[700px]">
+            <div className="h-[] md:h-[700px]">
               <img
                 src={slider1}
                 alt=""
@@ -62,7 +62,7 @@ const Home = () => {
                 srcset=""
               />
             </div>
-            <div className="h-[300px] md:h-[700px]">
+            <div className="h-[] md:h-[700px]">
               <img
                 src={slider2}
                 alt=""
@@ -70,7 +70,7 @@ const Home = () => {
                 srcset=""
               />
             </div>
-            <div className="h-[300px] md:h-[700px]">
+            <div className="h-[] md:h-[700px]">
               <img
                 src={slider3}
                 alt=""

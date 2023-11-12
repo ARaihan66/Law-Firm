@@ -5,22 +5,18 @@ const Casesolve = () => {
   const solveCases = [
     {
       numeric: '95',
-      operation: '%',
       achievement: 'CASES WE WON',
     },
     {
       numeric: '206',
-      operation: '+',
       achievement: 'LAWYERS TEAM',
     },
     {
       numeric: '524',
-      operation: '+',
       achievement: 'FREE CONSULTATIONS',
     },
     {
       numeric: '387',
-      operation: '+',
       achievement: 'CASES DISMISSED',
     },
   ]
@@ -32,7 +28,8 @@ const Casesolve = () => {
         </h1>
         <div className='casesolved-skild mt-10'>
           <p className='p-4 font-semibold text-slate-500'>
-           Our skilled lawyers in the country working with our clients to ensure that they get one-stop legal solution.
+            Our skilled lawyers in the country working with our clients to
+            ensure that they get one-stop legal solution.
           </p>
         </div>
       </div>
@@ -40,7 +37,7 @@ const Casesolve = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           {' '}
           {solveCases.map((solvecase, i) => (
-            <OneCaseSolve key={i} solvecase={solvecase}/>
+            <OneCaseSolve key={i} solvecase={solvecase} />
           ))}
         </div>
       </div>

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
-
-=======
 //import React from "react";
 //import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 
@@ -91,43 +86,43 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
 
 //export default Innovative;
 
-import React from "react";
-import "./innovative.css";
-import { Link } from "react-router-dom";
-import { FcServices } from "react-icons/fc";
+import React from 'react'
+import './innovative.css'
+import { Link } from 'react-router-dom'
+import { FcServices } from 'react-icons/fc'
 
 const services = [
   "We prioritize our clients' needs, offering personalized solutions and a commitment to achieving their legal objectives",
-  "Our firm maintains open and clear communication channels, ensuring clients are well-informed throughout the legal process",
-  "With specialization in corporate, commercial, and investment law, we offer comprehensive legal services to meet a wide range of client requirements.",
-  " Mustafizur Rahman & Associates boasts a team of highly experienced legal professionals renowned for their deep knowledge and track record of success in various legal domains.",
-];
->>>>>>> 20aa4309b7f034e5108a90dfec02aba7ecfc6c19
+  'Our firm maintains open and clear communication channels, ensuring clients are well-informed throughout the legal process',
+  'With specialization in corporate, commercial, and investment law, we offer comprehensive legal services to meet a wide range of client requirements.',
+  ' Mustafizur Rahman & Associates boasts a team of highly experienced legal professionals renowned for their deep knowledge and track record of success in various legal domains.',
+]
 
 const Innovative = () => {
   const handleClick = () => {
-    window.scrollTo(0, 0);
-  };
+    window.scrollTo(0, 0)
+  }
 
   return (
-    <div className="innovative-background1">
-      <h1 className="text-xl pt-10 md:text-3xl font-bold  text-amber-500 uppercase md:text-center mb-10">
-          Who We Are
-        </h1>
-      <div className="flex flex-wrap">
-        <p className="pl-80 pr-80 text-center">
+    <div className='innovative-background1'>
+      <h1 className='text-xl pt-10 md:text-3xl font-bold  text-amber-500 uppercase md:text-center mb-10 text-center'>
+        Who We Are
+      </h1>
+
+      <div className='md:flex md:justify-center'>
+        <p className='md:w-[700px] text-center px-6'>
           Mustafizur Rahman & Associates stands out as one of Bangladesh's
-          premier law firms, providing comprehensive legal services, with a
+          premier lawfirms,providing comprehensive legal services, with a
           distinct focus on corporate, commercial, and investment law expertise.
         </p>
       </div>
-      <div className="flex flex-wrap p-15 justify-center items-center">
-        <div className="flex-1">
-          <h2 className="text-xl mt-10 font-bold pt-8 pl-10">
+      <div className='mt-8 px-8 flex flex-wrap md:flex-nowrap justify-between'>
+        <div className='flex-1 p-4'>
+          <h2 className='text-xl'>
             One of the Top Law Firms in Dhaka, Bangladesh Specializing in
             Commercial and Corporate Law
           </h2>
-          <p className="text-justify pl-10 pr-10 pb-10 pt-5">
+          <p className='mt-4 text-justify'>
             Mustafizur Rahman & Associates is recognized as one of the leading
             law firms in Dhaka, Bangladesh, specializing in corporate and
             commercial law. Their extensive array of legal services encompasses
@@ -142,37 +137,37 @@ const Innovative = () => {
             and success.
           </p>
 
-          <Link to="/contact">
+          <Link to='/contact'>
             <button
-              className="get-start-btn px-5 py-4 md:px-[30px] md:py-[15px] lg:px-[30px] lg:py-[15px]"
+              className='get-start-btn px-5 py-4 mt-10 md:px-[30px] md:py-[15px]'
               onClick={handleClick}
             >
-              GET STARTED{" "}
+              GET STARTED{' '}
             </button>
           </Link>
         </div>
-        <div className="flex-1">
-          <h2 className="text-xl mt-10 font-bold p-8">
+        <div className='flex-1  p-4'>
+          <h2 className='text-xl'>
             Some points highlighting why Mustafizur Rahman & Associates is the
             most trusted firm in its field:
           </h2>
-          <p className="text-center">
+          <p className='mt-5 text-center font-semibold'>
             Why Mustafizur Rahman & Associates is the most trusted firm in its
             field?
           </p>
 
-          <div className="pt-5 pl-10 pr-10 pb-12">
+          <div className='mt-4'>
             {services.map((item, index) => (
-              <p className="flex mb-3" key={index}>
-                <FcServices className="service-icon" />
-                <span className="ml-3">{item} </span>
+              <p className='flex mb-3' key={index}>
+                <FcServices className='service-icon' />
+                <span className='ml-3'>{item} </span>
               </p>
             ))}
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Innovative;
+export default Innovative

@@ -13,7 +13,7 @@ const Main = () => {
   return (
     <div>
       <Header />
-      <div className='fixed left-4 top-1/2 z-50'>
+      <div className='fixed top-3/4 z-50 w-full'>
         <WhatsAppPhone />
       </div>
       <Navbar />
