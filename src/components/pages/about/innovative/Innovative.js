@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
-
-=======
 //import React from "react";
 //import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 
@@ -102,7 +97,6 @@ const services = [
   "With specialization in corporate, commercial, and investment law, we offer comprehensive legal services to meet a wide range of client requirements.",
   " Mustafizur Rahman & Associates boasts a team of highly experienced legal professionals renowned for their deep knowledge and track record of success in various legal domains.",
 ];
->>>>>>> 20aa4309b7f034e5108a90dfec02aba7ecfc6c19
 
 const Innovative = () => {
   const handleClick = () => {

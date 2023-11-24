@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "./testimonial.css";
 import Avater from "../../../../assets/avater.png";
-import { MuiTelInput } from 'mui-tel-input'
+import { MuiTelInput } from "mui-tel-input";
 import { fetchCommentData } from "../../../../feature/dataSlice";
 const Testimonial = () => {
   const [formData, setFormData] = useState({
@@ -17,11 +17,11 @@ const Testimonial = () => {
     comment: "",
   });
 
-  const [phone, setValue] = React.useState('')
+  const [phone, setValue] = React.useState("");
 
   const handleChange = (newValue) => {
-    setValue(newValue)
-  }
+    setValue(newValue);
+  };
 
   const { commentData } = useSelector((state) => state.storeData);
   //console.log(commentData.data);
@@ -30,7 +30,7 @@ const Testimonial = () => {
   const { name, email, comment } = formData;
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    //event.preventDefault();
     axios
       .post("http://localhost:8000/api/comment/add", {
         name,
@@ -39,7 +39,9 @@ const Testimonial = () => {
         comment,
       })
       .then((result) => {
-        if (result.data.message === "successful") navigate(0);
+        if (result.data.success === true) {
+          navigate(0);
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -141,8 +143,7 @@ const Testimonial = () => {
             onChange={handleOnChange}
           />*/}
 
-<MuiTelInput value={phone} onChange={handleChange} />
-
+          <MuiTelInput value={phone} onChange={handleChange} />
 
           <input
             className="p-2 mt-4"
