@@ -1,67 +1,33 @@
 import React, { useState, useEffect } from "react";
-import team1 from "../../../assets/team-1.jpg";
-import team2 from "../../../assets/team-2.jpg";
-import team3 from "../../../assets/team-3.jpg";
-import team4 from "../../../assets/team-4.jpg";
+
 import "./attorney.css";
 import OneAttorney from "./oneattorney/OneAttorney";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchAdvocateData } from "../../../feature/dataSlice";
-const Attorney = () => {
-  const { advocateData} = useSelector(
-    (state) => state.storeData
-  );
 
-  const dispatch = useDispatch();
+const Attorney = () => {
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    dispatch(fetchAdvocateData());
-  });
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/api/advocate/client/get", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        });
 
-  const Attorneys = [
-    {
-      img: team1,
-      name: "Paz Coyers",
-      desig: "Senior Attorney",
-    },
-    {
-      img: team2,
-      name: "Wanita Touchette",
-      desig: "Senior Attorney",
-    },
-    {
-      img: team3,
-      name: "Jefferson Leveston",
-      desig: "Senior Attorney",
-    },
-    {
-      img: team4,
-      name: "Gali Borzillo",
-      desig: "Senior Attorney",
-    },
-    {
-      img: team2,
-      name: "Wanita Touchette",
-      desig: "Senior Attorney",
-    },
-    {
-      img: team1,
-      name: "Paz Coyers",
-      desig: "Senior Attorney",
-    },
-    {
-      img: team4,
-      name: "Gali Borzillo",
-      desig: "Senior Attorney",
-    },
+        const serviceData = await response.json();
+        const { data } = serviceData;
+        console.log(data);
+        setData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-    {
-      img: team3,
-      name: "Jefferson Leveston",
-      desig: "Senior Attorney",
-    },
-  ];
-
+    fetchData();
+  }, []);
   const [visibleLetters, setVisibleLetters] = useState(0);
   const slogan =
     "Our progress with yesterday's experience, today's reality and tomorrow's plan.";
@@ -96,13 +62,11 @@ const Attorney = () => {
         <h1 className="text-3xl mt-20  font-bold  uppercase text-center text-navyblue">
           Meet Our Lawers
         </h1>
-        {advocateData && advocateData.data && 
-        <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-20 p-10 mt-2 mb-10">
-          {advocateData.data.map((attorney, index) => (
-            <OneAttorney attorney={attorney} />
-          ))}
+
+        <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20 p-10 mt-2 mb-10">
+          {data &&
+            data.map((attorney, index) => <OneAttorney attorney={attorney} />)}
         </div>
-        }
       </div>
     </div>
   );

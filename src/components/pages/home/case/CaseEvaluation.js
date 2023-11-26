@@ -11,32 +11,47 @@ const CaseEvaluation = () => {
           className="rounded-full w-30 h-30  bg-gray-200 lg:w-30 lg:h-30"
         />
       </div>
-      <h2 className="font-bold text-2xl text-center text-navyblue">FREE CASE EVALUATION</h2>
+      <h2 className="font-bold text-2xl text-center text-navyblue">
+        FREE CASE EVALUATION
+      </h2>
       <p className="text-justify mt-5 ">
-        At Mustafizur Rahman & Associates, we understand that facing legal
-        challenges can be a daunting experience. That's why we are pleased to
-        offer a free initial consultation to prospective clients. Our aim is to
-        provide you with an opportunity to discuss your legal concerns,
-        understand your rights, and explore potential solutions without any
-        financial obligation. During this consultation, our experienced legal
-        team will attentively listen to your case, assess its merits, and
-        provide preliminary guidance on the best course of action. Whether
-        you're dealing with family law issues, criminal matters, corporate
-        disputes, or any other legal concerns, our dedicated attorneys are here
-        to assist you.
+        Embarking on the legal journey can be a daunting prospect, and at
+        Mustafizur Rahman & Associates, we stand ready to alleviate the
+        complexity by offering a complimentary initial consultation to
+        prospective clients. This exclusive opportunity serves as a cornerstone
+        in our commitment to providing not just legal assistance but a
+        supportive and understanding environment during challenging times. Our
+        foremost objective is to empower you with knowledge about your legal
+        situation, ensuring you comprehend your rights and are equipped to make
+        informed decisions about your case. During this in-depth free case
+        evaluation, our accomplished legal team pledges to invest the time
+        necessary to comprehensively understand the nuances of your situation.
+        Beyond a mere overview, we delve into the intricacies, meticulously
+        assessing the merits of your case. Following this thorough evaluation,
+        we provide clear and insightful preliminary guidance, mapping out
+        strategic courses of action tailored to your unique circumstances.
+        Whether your legal concerns span family law intricacies, criminal
+        matters, corporate disputes, or extend to any other facet of the legal
+        spectrum, our dedicated attorneys are prepared to navigate these
+        complexities with you.
       </p>
 
       <p className="text-justify mt-3">
-        We believe that access to legal counsel should be readily available, and
-        our commitment to a free initial consultation is one way we strive to
-        make quality legal assistance accessible to all. Our team is dedicated
-        to providing you with the information and support you need to make
-        informed decisions about your legal matters.Get in touch with us today
-        to schedule your complimentary consultation and take the first step
-        toward resolving your legal issues. We are here to guide you through the
-        legal process, answer your questions, and help you find the best path
-        forward. Your peace of mind and confidence in your legal representation
-        are of the utmost importance to us.
+        Our belief in equal access to legal counsel forms the foundation of our
+        practice, and the provision of a free initial consultation exemplifies
+        our dedication to this principle. We recognize the critical importance
+        of ensuring you are well-informed about your legal options before
+        embarking on any consequential decisions. The committed legal team at
+        Mustafizur Rahman & Associates not only disseminates information but
+        also strives to offer the support necessary for you to make informed
+        decisions about your legal matters. Reach out to us today to schedule
+        your complimentary consultation—a pivotal first step toward resolving
+        your legal concerns. We are poised to demystify the legal process,
+        address your questions, and collaboratively determine the most fitting
+        path forward. Your peace of mind and confidence in your legal
+        representation are our top priorities. At Mustafizur Rahman &
+        Associates, our pledge is to make quality legal assistance universally
+        accessible to all those seeking guidance and resolution.
       </p>
     </div>
   );

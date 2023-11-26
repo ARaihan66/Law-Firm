@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./question.css";
 
 import {
@@ -6,8 +6,6 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchFaqData } from "../../../../feature/dataSlice";
 function Icon({ id, open }) {
   return (
     <svg
@@ -32,52 +30,66 @@ function Icon({ id, open }) {
 const QuestionAns = () => {
   const [open, setOpen] = React.useState(null);
 
-  const { faqData } = useSelector((state) => state.storeData);
-  
-
-  const handleOpen = (value) => setOpen(open === value ? null : value);
-
-  const dispatch = useDispatch();
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    dispatch(fetchFaqData());
-  }, [dispatch]);
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/api/faq/client/get", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        });
+
+        const serviceData = await response.json();
+        const { data } = serviceData;
+        console.log(data);
+        setData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handleOpen = (value) => setOpen(open === value ? null : value);
 
   return (
     <div className="mt-20">
       <h1 className="text-3xl text-center font-bold md:font-bold lg:font-bold text-navyblue uppercase">
         FAQ'S
       </h1>
-      {faqData && faqData.data && (
-        <div className="px-4 md:px-20 mt-10">
-          {
-            faqData.data.map((faq, index) => (
-              <>
-                <Accordion
-                  key={index}
-                  open={open === index}
-                  icon={<Icon id={index} open={open} />}
-                  className="mb-2 rounded-lg border border-blue-gray-100 px-4"
-                >
-                  <AccordionHeader
-                    onClick={() => handleOpen(index)}
-                    className={`border-b-0 transition-colors ${
-                      open === index ? "text-blue-500 hover:!text-blue-700" : ""
-                    }`}
-                  >
 
-                    {faq.question}
-                  </AccordionHeader>
-                  <AccordionBody className="pt-0 text-base font-normal">
-                    <p className="single-Question-Hover p-2 text-[18px]">
-                      {faq.answer}
-                    </p>
-                  </AccordionBody>
-                </Accordion>
-              </>
-            ))}
+        <div className="px-4 md:px-20 mt-10">
+          { data && data.map((faq, index) => (
+            <>
+              <Accordion
+                key={index}
+                open={open === index}
+                icon={<Icon id={index} open={open} />}
+                className="mb-2 rounded-lg border border-blue-gray-100 px-4"
+              >
+                <AccordionHeader
+                  onClick={() => handleOpen(index)}
+                  className={`border-b-0 transition-colors ${
+                    open === index ? "text-blue-500 hover:!text-blue-700" : ""
+                  }`}
+                >
+                  {faq.question}
+                </AccordionHeader>
+                <AccordionBody className="pt-0 text-base font-normal">
+                  <p className="single-Question-Hover p-2 text-[18px]">
+                    {faq.answer}
+                  </p>
+                </AccordionBody>
+              </Accordion>
+            </>
+          ))}
         </div>
-      )}
+    
     </div>
   );
 };

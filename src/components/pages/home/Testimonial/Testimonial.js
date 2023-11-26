@@ -3,14 +3,13 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { useDispatch, useSelector } from "react-redux";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "./testimonial.css";
 import Avater from "../../../../assets/avater.png";
 import { MuiTelInput } from "mui-tel-input";
-import { fetchCommentData } from "../../../../feature/dataSlice";
 const Testimonial = () => {
+  const [data, setData] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,14 +22,12 @@ const Testimonial = () => {
     setValue(newValue);
   };
 
-  const { commentData } = useSelector((state) => state.storeData);
-  //console.log(commentData.data);
   const navigate = useNavigate();
 
   const { name, email, comment } = formData;
 
   const handleSubmit = (event) => {
-    //event.preventDefault();
+    event.preventDefault();
     axios
       .post("http://localhost:8000/api/comment/add", {
         name,
@@ -39,9 +36,7 @@ const Testimonial = () => {
         comment,
       })
       .then((result) => {
-        if (result.data.success === true) {
-          navigate(0);
-        }
+        if (result.data.success === true) navigate(0);
       })
       .catch((err) => {
         console.log(err);
@@ -55,21 +50,31 @@ const Testimonial = () => {
     }));
   };
 
-  //const handleOnChange = (event) => {
-  //  if (event && event.target) {
-  //    const { name, value } = event.target;
-  //    setFormData((prevState) => ({
-  //      ...prevState,
-  //      [name]: value, // Update the specific field (name) in the state
-  //    }));
-  //  }
-  //};
-
-  const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(fetchCommentData());
-  }, [dispatch]);
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "http://localhost:8000/api/comment/client/get",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            credentials: "include",
+          }
+        );
+
+        const serviceData = await response.json();
+        const { data } = serviceData;
+        console.log(data);
+        setData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="pt-20 testimonila-background1">
@@ -77,43 +82,41 @@ const Testimonial = () => {
         Words Form Clients
       </h1>
       <div
-        className="rounded-2xl testimonial-swiper testimonila-background w-[300px] md:w-[770px] lg:w-[1200px] md:p-8 "
+        className="rounded-2xl testimonial-swiper testimonila-background  w-[300px] md:w-[770px] lg:w-[1200px] md:p-8 "
         id="testimonial"
       >
         <div>
           <div className="md:my-8 cursor-grabbing p-6 rounded">
-            {commentData && commentData.data && (
-              <Swiper
-                modules={[Autoplay]}
-                spaceBetween={50}
-                autoplay={{ delay: 2000 }}
-                breakpoints={{
-                  375: { slidesPerView: 1 },
-                  767: { slidesPerView: 1 },
-                  1200: { slidesPerView: 2 },
-                }}
-              >
-                {commentData.data.map((item, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="card bg-base-100 shadow-xl p-4">
-                      <figure className="">
-                        <img
-                          src={Avater}
-                          alt={item.name}
-                          className="rounded-xl w-[170px]"
-                        />
-                      </figure>
-                      <div className="card-body items-center text-center">
-                        <p className="text-justify">{item.comment}</p>
-                        <div className="card-actions">
-                          <h2 className="font-bold">{item.name}</h2>
-                        </div>
+            <Swiper
+              modules={[Autoplay]}
+              spaceBetween={50}
+              autoplay={{ delay: 2000 }}
+              breakpoints={{
+                375: { slidesPerView: 1 },
+                767: { slidesPerView: 1 },
+                1200: { slidesPerView: 2 },
+              }}
+            >
+              {data.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="card bg-base-100 shadow-xl p-4 h-[450px] md:h-[300px]">
+                    <figure className="">
+                      <img
+                        src={Avater}
+                        alt={item.name}
+                        className="rounded-xl w-[70px] h-[70px]"
+                      />
+                    </figure>
+                    <div className="card-body items-center text-center">
+                      <p className="text-sm">{item.comment.slice(0, 250)}</p>
+                      <div className="card-actions">
+                        <h2 className="font-bold text-sm">{item.name}</h2>
                       </div>
                     </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            )}
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
@@ -125,9 +128,8 @@ const Testimonial = () => {
           <h1 className="font-semibold text-xl uppercase text-white pb-4">
             Leave a Comment
           </h1>
-
           <input
-            className="mt-4 p-2"
+            className="p-4"
             type="text"
             placeholder="Your Name"
             value={name}
@@ -141,12 +143,15 @@ const Testimonial = () => {
             value={phone}
             name="phone"
             onChange={handleOnChange}
-          />*/}
-
-          <MuiTelInput value={phone} onChange={handleChange} />
-
+          />*/}{" "}
+          <MuiTelInput
+            value={phone}
+            defaultCountry="BD"
+            onChange={handleChange}
+            className="w-[100%] bg-white rounded"
+          />
           <input
-            className="p-2 mt-4"
+            className="p-4"
             type="email"
             placeholder="Enter Your E-mail"
             value={email}
@@ -155,16 +160,15 @@ const Testimonial = () => {
             onChange={handleOnChange}
           />
           <textarea
-            className="mt-4 p-2"
+            className=" p-2"
             placeholder="Comment Here"
             value={comment}
             name="comment"
             onChange={handleOnChange}
           />
-
           <div className="commentbtn1 ">
             <input
-              className="comment-submit mt-4 p-3 w-[100%]"
+              className="comment-submit  p-3 w-[100%]"
               type="submit"
               value="Post Comment"
             />

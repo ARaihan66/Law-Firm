@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="hidden lg:flex justify-evenly p-3 header-shadow">
-      <a href="tel:+8801323878274" target="blank">
+      <a href="tel:+8801911382094" target="blank">
         <div className="flex items-center mt-3">
           <FaPhoneAlt className="mr-2 mt-1 header-icon" />
-          <p className="header-p">Get Free Advice +8801323878274</p>
+          <p className="header-p">Get Free Advice +88 01911-382094</p>
         </div>
       </a>
 
@@ -21,7 +21,7 @@ const Header = () => {
         <a className="header-p" href={`mailto:rasmul@gmail.com`}>
           rasmul@gmail.com
         </a>
-        .{/*<p className='header-p'>rasmul@gmail.com</p>*/}
+        .
       </div>
       <div>
         <Link to="/contact">
